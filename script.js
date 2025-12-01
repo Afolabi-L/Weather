@@ -94,7 +94,7 @@ searchInput.addEventListener("keyup", (e) => {
 locationButton.addEventListener("click", () => {
     navigator.geolocation.getCurrentPosition(position =>{
        const { latitude, longitude } = position.coords;
-       const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude}, ${longitude}&days=2`; 
+       const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${latitude}, ${longitude}&days=2`; 
        getWeatherDetails(API_URL);
 
     }, error => {
@@ -105,3 +105,4 @@ locationButton.addEventListener("click", () => {
 // Initial weather request for  lagos to be the default city
 
 setupWeatherRequest("Lagos");
+
