@@ -75,7 +75,7 @@ const getWeatherDetails = async (API_URL) => {
 
 // Set up the weather request for a specific city
 const setupWeatherRequest = (cityName) => {
-   const API_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=2`; 
+   const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=2`; 
        getWeatherDetails(API_URL);
 }
 
@@ -103,4 +103,5 @@ locationButton.addEventListener("click", () => {
 });
 
 // Initial weather request for  lagos to be the default city
+
 setupWeatherRequest("Lagos");
